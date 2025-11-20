@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M.N.K Signup Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50 min-h-screen flex items-center justify-center py-10">
+    <div class="max-w-5xl w-full bg-white shadow-lg rounded-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
+      <!-- Left Section -->
+      <div class="p-8 bg-gradient-to-br from-blue-600 via-blue-500 to-indigo-600 text-white flex flex-col justify-between">
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <div class="bg-white/20 rounded-full p-2">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.6 9.8v-6.9h-2.1V12h2.1V9.7c0-2.1 1.3-3.3 3.2-3.3.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.2l-.4 2.9h-1.8v6.9A10 10 0 0022 12z"/></svg>
+            </div>
+            <h1 class="text-2xl font-extrabold">ConnectBook</h1>
+          </div>
+          <h2 class="text-3xl font-bold mb-3">Create an account</h2>
+          <p class="text-white/90">Connect with friends and the world around you.</p>
+          <ul class="mt-6 space-y-3 text-sm">
+            <li class="flex gap-3 items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white/90 mt-0.5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z" clip-rule="evenodd"/></svg><span>Real-time notifications & easy privacy controls</span></li>
+            <li class="flex gap-3 items-start"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white/90 mt-0.5" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM8 9h4v2H8V9z"/></svg><span>Secure storage and encryption options</span></li>
+          </ul>
+        </div>
+        <div class="mt-8 text-sm text-white/80">
+          <p>Already have an account?</p>
+          <a href="./login.html" class="inline-block mt-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg font-medium">Log in</a>
+        </div>
+      </div>
+
+      <!-- Right Section: Signup Form -->
+      <div class="p-8">
+        <form class="space-y-6" onsubmit="signupDetails(event)">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700">First name</label>
+              <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-2" placeholder="Noman"  id="firstName" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Last name</label>
+              <input type="text" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-2" placeholder="Khan" id="lastName" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-gray-700">Email</label>
+            <input type="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-2" placeholder="you@example.com" id="email" />
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Password</label>
+              <input type="password" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-2" placeholder="Create a password" id="password" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Phone Number</label>
+              <input type="number" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-2" placeholder="Phone Number" id="phoneNumber" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Birthday</label>
+              <input type="date" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-2" id="birthday" />
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Gender</label>
+              <select class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-2 focus:ring-blue-500 p-2" id="gender">
+                <option>Prefer not to say</option>
+                <option>Female</option>
+                <option>Male</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3">
+            <input id="terms" type="checkbox" class="h-4 w-4 mt-1" />
+            <label for="terms" class="text-sm text-gray-700">I agree to the <a href="#" class="text-blue-600 underline">Terms</a> and <a href="#" class="text-blue-600 underline">Privacy Policy</a>.</label>
+          </div>
+
+          <button type="submit" class="w-full rounded-md bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 shadow">Sign Up</button>
+
+          <div class="flex items-center gap-3">
+            <hr class="flex-1" />
+            <span class="text-sm text-gray-400">Or continue with</span>
+            <hr class="flex-1" />
+          </div>
+
+          <div class="flex gap-3">
+            <button type="button" class="flex-1 inline-flex justify-center items-center gap-2 rounded-md border border-gray-300 py-2 px-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12a10 10 0 0015.473 9.16V14.89h-2.34v-2.89h2.34V9.88c0-2.32 1.38-3.6 3.49-3.6.99 0 2.04.18 2.04.18v2.24h-1.15c-1.13 0-1.48.7-1.48 1.42v1.78h2.51l-.4 2.89h-2.11v6.27A10 10 0 0022 12z"/></svg>
+              Facebook
+            </button>
+            <button type="button" class="flex-1 inline-flex justify-center items-center gap-2 rounded-md border border-gray-300 py-2 px-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M21.35 11.1h-9.18v2.92h5.23c-.23 1.35-1.32 3.98-5.23 3.98-3.14 0-5.7-2.6-5.7-5.8s2.56-5.8 5.7-5.8c1.8 0 3 0.76 3.68 1.41l2.52-2.46C18.9 4.04 16.32 3 13.5 3 7.98 3 3.58 7.4 3.58 12.9s4.4 9.9 9.92 9.9c8.73 0 9.95-7.3 9.95-9.7 0-.66-.07-1.2-.1-1.98z"/></svg>
+              Google
+            </button>
+          </div>
+          <p class="text-xs text-gray-400 mt-2">By continuing, you agree to our User Agreement and acknowledge our Cookie Policy.</p>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="config.js"></script>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
